@@ -6,7 +6,9 @@
     <title>Contact Form</title>
 </head>
 <body>
-    <form action=""; method="post">
+    <form method="post" action="">
+      <!--Hidden field-->
+      <input type="hidden" name="form-type" value="Contact">
         <h1>Contact Us</h1>
              <!--Personal Information-->
        <fieldset>
@@ -19,7 +21,7 @@
           <input type="Email" id="name" required placeholder="Enter Email Address" autocomplete="email"> <br> <br>
                <!--Phone-->   
           <label for="Phone Number"> Phone Number</label>
-          <input type="tel" id="phone" placeholder="123-456-7890" autocomplete="tel"> <br> <br>
+          <input type="tel" id="phone" placeholder="123-456-7890" pattern="[0-9] {3} -[0-9] {3} -[0-9] {4}" autocomplete="tel"> <br> <br>
                <!--Gender-->
           <span>Gender :</span>
           <input type="radio" id="male" name="gender" value="male"> 
