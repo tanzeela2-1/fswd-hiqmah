@@ -8,6 +8,26 @@
 <body>
     <form action=""; method="post">
         <h1>Contact Us</h1>
+       <fieldset>
+          <legend>Personal Information</legend>
+               <!--Name-->
+          <label for="Username"> Username :</label>
+          <input type="text" id="name" required   placeholder ="Enter Your Name" autocomplete="name"> <br> <br>
+               <!--Email-->
+          <label for="Email"> Email:</label>
+          <input type="Email" id="name" required placeholder="Enter Email Address" autocomplete="email"> <br> <br>
+               <!--Phone-->   
+          <label for="Phone Number"> Phone Number</label>
+          <input type="tel" id="phone" placeholder="123-456-7890" autocomplete="tel"> <br> <br>
+               <!--Gender-->
+          <span>Gender :</span>
+          <input type="radio" id="male" name="gender" value="male"> 
+          <lable for ="male">  Male </lable>
+          <input type="radio" id="female" name="gender" value="female"> 
+          <lable for ="female">  Female </lable>  
+          <input type="radio" id="other" name="gender" value="other"> 
+          <lable for ="other">  Other </lable>  
+       </fieldset>
     </form>
     
 </body>
