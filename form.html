@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Form</title>
+    <link rel ="stylesheet" href="style2.css">
 </head>
 <body>
     <form method="post" action="">
       <!--Hidden field-->
       <input type="hidden" name="form-type" value="Contact">
-        <h1>Contact Us</h1>
+        <h1>FORM</h1>
              <!--Personal Information-->
        <fieldset>
           <legend>Personal Information</legend>
@@ -25,17 +26,17 @@
                <!--Gender-->
           <span>Gender :</span>
           <input type="radio" id="male" name="gender" value="male"> 
-          <lable for ="male">  Male </lable>
+          <label for ="male">  Male </label>
           <input type="radio" id="female" name="gender" value="female"> 
-          <lable for ="female">  Female </lable>  
+          <label for ="female">  Female </label>  
           <input type="radio" id="other" name="gender" value="other"> 
-          <lable for ="other">  Other </lable>  
+          <label for ="other">  Other </label>  
        </fieldset>
        <!--Inquiry Section-->
       <fieldset>
          <legend>Message Details</legend>
           <!--Subject-->
-          <lable for ="subject"> Subject :</lable>  
+          <label for ="subject"> Subject :</label>  
           <select id="subject"  name ="subject" required> 
           <option value=""> --Please choose an option--</option>
           <option value="general">General Inquiry </option>
@@ -43,7 +44,7 @@
           <option value="feedback"> Feedback</option>
           </select><br><br>
           <!--Message-->
-        <lable for ="message"> Message :</lable>
+        <label for ="message"> Message :</label>
         <textarea id="message" name="message" rows="5" cols="40" required placeholder="Write your message here"></textarea>
         <br><br>
         </fieldset>
