@@ -1,36 +1,4 @@
-// let mehakHeight =5 ;
-// let  mehakWeight =55;
-// let tanzeelaHeight =6;
-// let tanzeelaWeight=53;
-
-
-
-// let bmi =mehakWeight/2*mehakHeight*0.3;
-// let  tbmi =tanzeelaWeight/2*tanzeelaHeight*0.3
-// console.log(bmi);
-// console.log(tbmi);
-
-
-// if(tbmi>30){
-//     console.log("noraml");
-// }else if(tbmi>=40){
-//     console.log("you need to improve");
-// }else{
-//     console.log("you need to more improve");
-// }
-
-
-// let inputNum1=prompt("enter the name");
-//  console.log(Number(inputNum1))
-// if (inputNum1 %2==0)
-// {
-//     console.log("even");
-// }
-// else{
-//     console.log("odd");
-// }
-
-                     // switch case
+           // switch case
   let marks= Number(prompt("Enter the number"));
   console.log (marks)
 switch (true){
@@ -54,6 +22,7 @@ switch (true){
     default : 
         console.log("fail");
 }
+      //TASK 
 let age=21;
  let isStudent=true;
  let isWeekend=false;
