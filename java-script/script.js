@@ -54,11 +54,11 @@ switch (true){
     default : 
         console.log("fail");
 }
-let age=21;
-let isStudent=true;
-let isWeekend=false;
-let ticketPrice;
- if (age<5){
-    ticketPrice=0;
+// let age=21;
+// let isStudent=true;
+// let isWeekend=false;
+// let ticketPrice;
+//  if (age<5){
+//     ticketPrice=0;
     
- }
+//  }
