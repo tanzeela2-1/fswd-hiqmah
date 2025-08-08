@@ -27,28 +27,31 @@
     return"invalid card amount";
   }
       let finalAmount = cartAmount;
-  
-  if (cartAmount >=0 && cartAmount <500){
-    console.log ("no discount");
-  }
-  if(cartAmount >=500 && cartAmount < 999){
-    finalAmount -= cartAmount * 0.10 //10% off
+    // Base discount
+   if (cartAmount >=0 && cartAmount <500){
+     console.log ("no discount");
+   }
+  if(cartAmount >=500 && cartAmount <= 999){
+    finalAmount -= finalAmount  * 0.10;//10% off   
+    console.log("you got 10% off",cartAmount);
 
-  }else if (cartAmount >=1000 && cartAmount < 1999){
-    finalAmount -= cartAmount * 0.15 //15% off
+  }else if (cartAmount >=1000 && cartAmount <=1999){
+    finalAmount -= finalAmount  * 0.15; //15% off
+     console.log("you got 15% off",cartAmount);
  
   }else if (cartAmount >=2000){
-     finalAmount -= cartAmount * 0.25 //25% off
+     finalAmount -= finalAmount  * 0.25; //25% off
+       console.log("you got 25% off",cartAmount);
   }
 
-  //coupon discount
+         //coupon discount
   if (hasCoupon){
     finalAmount -= 100;
   }
   if (isFirstPurchase){
-  finalAmount -= finalAmount * 0.05 //bonus
+  finalAmount -= finalAmount * 0.05; //bonus
     }  //extra 5%
-    finalAmount += finalAmount * 0.18   //tax(18% GST)
+     finalAmount += finalAmount * 0.18 ;  //tax(18% GST)
     return Number( finalAmount.toFixed(2));   //round to 2 decimal place
   
 
