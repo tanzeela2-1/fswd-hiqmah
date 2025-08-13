@@ -1,26 +1,5 @@
-//  function info(age, isStudent, isWeekend){
-//    if (isStudent== 'yes' || isWeekend== 'yes'){
-//      isStudent="i am student"
-//       isWeekend="it is a weekend"
 
-     
-//    }else{
-//      isStudent="i am not student"
-//      isWeekend="it is not weekend"
-   
-//    }
-  
-     
-    
-
-//     return `My age is ${age} and  ${isStudent } and  ${isWeekend}`
-// //   return `"My age is " + age + " and i am a " + isStudent + " it is a " + isWeekend`
-   
-//  }
-
-//  console.log(info( 32,'yes','yes'))
- 
-//  console.log(info( 49,'no','yes'))
+    console.log("Get Final Price task");
  function getFinalPrice(cartAmount, hasCoupon, isFirstPurchase)
 {
   if( cartAmount < 0 || typeof cartAmount !== "number")  {
@@ -61,3 +40,87 @@ console.log(getFinalPrice(1100,true,true));
 console.log(getFinalPrice(2400,true,false));
 console.log(getFinalPrice(300,true,true));
 console.log(getFinalPrice(-100 ,false,false));
+
+
+
+//ATM TASK
+let balance =5000;           //balance
+const correctPin =1234;     //Pin
+    //validationPin
+const validatePin = inputPin => inputPin === correctPin;  //arrow function: compare pin is validate or not
+      //check balance 
+const checkBalance = balance => alert(`Your current balance is ₹${balance}`);
+     // deposit
+const deposit = (balance , amount )=>{
+   if(amount <= 0 || isNaN(amount)){
+        alert("Invalid deposit amount .");
+        return balance;
+   }
+   balance += amount;
+   alert(`deposit successfull! your new balance is  ₹ ${balance}`);
+   return balance; 
+   
+  };
+  const withDraw = (balance , amount )=>{
+   if(amount <= 0 || isNaN(amount)){
+    alert("Invalid withdrawal amount .");
+    return balance;
+   } else
+    if (amount > balance){
+      alert('Infufficient funds');
+      return balance;
+         }
+           balance -= amount;
+             alert (`withdraw successful! your new balance is ${balance}`)
+              return balance;
+               
+  };
+  const atmInterface = ()  =>{
+    let pin = Number(prompt("Enter PIN:")); 
+      if(!validatePin(pin)){
+       alert("Incorrect PIN. Access denied.");
+      return ;
+     } 
+      alert ("Welcome to the ATM!");
+    console.log ("press 1 CheckBalance");
+   console.log ("press 2 Deposit Money");
+   console.log ("press 3 Withdraw");
+   console.log ("press 4 Exit");
+  
+
+
+   let option =Number(prompt("Enter the option:"));
+  //  console.log(option);
+   if(option===1){
+    checkBalance(balance);
+   }else if (option===2){
+       let amount =Number(prompt("Enter the amount deposit"))
+       deposit(amount,balance);
+   }else if (option ===3){
+      let amount =Number(prompt("Enter the amount withdraw"))
+    withDraw(balance, amount);
+
+   }else if (option ===4){
+      console.log ("Thankyou for using the ATM");
+  
+   }
+   else{
+    alert("Invalid option selected.");
+   }
+  };
+   
+    atmInterface();
+    
+ 
+ 
+
+  
+
+  
+
+ 
+ 
+
+
+
+  
