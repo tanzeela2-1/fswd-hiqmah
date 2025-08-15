@@ -43,7 +43,7 @@ console.log(getFinalPrice(-100 ,false,false));
 
 
 
-//ATM TASK
+                                               //ATM TASK
 let balance =5000;           //balance
 const correctPin =1234;     //Pin
     //validationPin

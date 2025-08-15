@@ -31,7 +31,8 @@
   available: true
  }
  ];
- console.log("Before adding a book:", books.slice());  //The .slice() method creates a shallow copy of part or all of an array without modifying the original array.
+ console.log("before adding a book:", books);
+//  console.log("Before adding a book:", books.slice());  //The .slice() method creates a shallow copy of part or all of an array without modifying the original array.
 
   // Add New Book 
 
@@ -47,7 +48,7 @@
    //find all books by a specific author 
 const booksByAuthor = [];
 const searchAuthor = "Donald E. Knuth";
-for (let i = 0; i < books.length-1; i++) {
+for (let i = 0; i < Pbooks.length-1; i++) {
   if (books[i].author === searchAuthor) {
     booksByAuthor.push(books[i]);
   }
@@ -63,28 +64,9 @@ for(let i=0 ;i < books.length; i++){
 }
 
 console.log("Available books:", availableBooks);
-  //sort
-
-function sortBook(){
-  return[...books].sort((a,b) => b.year - a.year);
-}
-console.log("Books Sorted by Year:",sortBook());
+  
+//TODO:
+//FIXME:
 
 
 
-function borrowBook(title){
-  for(let i=0 ;i < books.length; i++){
-    if(books[i].title ===title){
-      if(books[i].available ){
-        books[i].available = false;
-      console.log(`you borrowed  ${title} ".`);
-    
-    }else{
-      console.log (`"${title} " is already borrowed. `)
-    }
-    return;
-  }
-}
-  console.log("book not found.")
-}
-borrowBook("operating System Concepts");
