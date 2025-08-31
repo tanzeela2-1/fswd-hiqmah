@@ -9,8 +9,16 @@
 <body>
     <div class="container">
         <h1>Guess the Number</h1>
-        <p id="message"> Pick a number between 1 and 30</p>
-        <input type="number" id="guess" min="1"  max="30">
+      
+         <p id="message"></p>
+     
+<button  class=active onclick= "setDifficulty('easy') "id="easy">Easy</button>
+<button onclick= "setDifficulty('hard')" id="hard">Hard</button>
+<button onclick="resetFun()" id="reset">Reset</button>
+     
+        </div>  
+   <div class="gameArea">
+           <input type="number" id="guess"> 
         <button id="checkBtn">Check</button>
         <p id="attempts">Attempts: 0</p>
 
